@@ -7,9 +7,11 @@
 ---
 ## 📍 Overview
 
+
 This project explores and visualizes employee demographic and HR data using **MySQL** for data cleaning and analysis, and **Power BI** for interactive dashboard development. The dashboard presents insights into employee trends, diversity, and organizational dynamics over time.
 
 ---
+
 ## 🔧 Tools & Technologies
 
 - 🗃️ **MySQL** – For data cleaning and analytical queries
@@ -29,13 +31,13 @@ This project explores and visualizes employee demographic and HR data using **My
 
 ## 🎯 Project Objectives
 
-- Clean and transform raw HR data for analysis
-- Answer key HR-related business questions using SQL
-- Visualize results with interactive and insightful visuals in Power BI
+-  Clean and transform raw HR data for analysis
+-  Answer key HR-related business questions using SQL
+-  Visualize results with interactive and insightful visuals in Power BI
 
 ---
 ## Questions
-1.What is the gender breakdown of employees in the company?
+1. What is the gender breakdown of employees in the company?
 2.What is the race/ethnicity breakdown of employees in the company?
 3.What is the age distribution of employees in the company?
 4.How many employees work at headquarters versus remote locations?
@@ -59,6 +61,30 @@ This project explores and visualizes employee demographic and HR data using **My
 9.A large number of employees come from the state of Ohio.
 10.The net change in employees has increased over the years.
 11.The average tenure for each department is about 8 years with Legal and Auditing having the highest and Services, Sales and Marketing having the lowest.
+
+## 🔍 Sample SQL Query
+
+```sql
+-- Gender Breakdown of Active Employees
+SELECT gender, COUNT(*) as Count
+FROM hr
+WHERE age >= 18 AND termdate = '0000-00-00'
+GROUP BY gender;
+```
+
+---
+
+## 📊 Dashboard Highlights
+
+- ✅ **Gender, Race, and Age Group Distributions**
+- 🏠 **Remote vs Headquarters Workforce**
+- 🗺️ **Employees by State**
+- 🔄 **Yearly Employment Changes**
+- 💼 **Turnover Rate by Department**
+- 🕒 **Average Length of Employment**
+
+> 📄 See full report:[HR Distribution Dashboard.pdf](https://github.com/user-attachments/files/21495777/HR.Distribution.Dashboard.pdf)
+
 
 ## Limitations
 1.Some records had negative ages and these were excluded during querying(967 records). Ages used were 18 years and above.
